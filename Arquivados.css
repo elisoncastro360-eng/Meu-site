@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    background: #f0f2f5;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.container-arquivados {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header-arquivados {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    gap: 20px;
+}
+
+.header-arquivados h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.btn-voltar {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Grid de Fotos */
+.grid-arquivados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    padding: 2px;
+}
+
+.item-arquivado {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    cursor: pointer;
+    background: #eee;
+}
+
+.item-arquivado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.item-arquivado:hover img { opacity: 0.8; }
+
+/* Modal */
+.view-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#imgExpandida {
+    max-width: 90%;
+    max-height: 70%;
+    border-radius: 8px;
+}
+
+.modal-acoes {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-acao {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.restaurar { background: #1877f2; color: white; }
+.excluir { background: #ff4d4d; color: white; }
+
+.close-view {
+    position: absolute;
+    top: 20px; right: 30px;
+    color: white; font-size: 35px; cursor: pointer;
+}
