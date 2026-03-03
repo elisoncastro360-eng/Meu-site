@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações - PulseFeed</title>
+  <link rel="stylesheet" href="Config.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="config-container">
+    <header class="config-header">
+      <a href="../Feed/Feed.html" class="btn-back">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <h1>Configurações</h1>
+    </header>
+
+    <div class="config-grid">
+      <a href="../Privacidade/Privacidade.html" class="config-card icon-privacidade">
+        <i class="fa-solid fa-user-secret"></i>
+        <span>Privacidade</span>
+      </a>
+      <a href="../Info/Info.html" class="config-card icon-info">
+        <i class="fa-solid fa-id-card"></i>
+        <span>Informações</span>
+      </a>
+      <a href="../Segurança/Segurança.html" class="config-card icon-seguranca">
+        <i class="fa-solid fa-shield"></i>
+        <span>Segurança</span>
+      </a>
+      <a href="../Verificado/Verificação.html" class="config-card icon-verificado">
+        <i class="fa-solid fa-check-circle"></i>
+        <span>Verificação</span>
+      </a>
+      <a href="../Carteira/Carteira.html" class="config-card icon-saldo">
+        <i class="fa-solid fa-wallet"></i>
+        <span>Saldo</span>
+        <small>3036,00 MZ</small>
+      </a>
+      <a href="../Termos/Termos.html" class="config-card icon-termos">
+        <i class="fa-solid fa-file-contract"></i>
+        <span>Termos</span>
+      </a>
+    </div>
+
+    <div class="config-list-bottom">
+      
+      <a href="../Afiliados/Afiliados.html" class="config-row-link">
+        <div class="config-row">
+          <div class="row-info icon-afiliado">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            <span>Ser Afiliado</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </div>
+      </a>
+
+      <a href="../Grupos/CriarGrupo.html" class="config-row-link">
+        <div class="config-row">
+          <div class="row-info icon-grupo">
+            <i class="fa-solid fa-users-gear"></i>
+            <span>Criar Grupo</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </div>
+      </a>
+
+      <a href="../Paginas/CriarPagina.html" class="config-row-link">
+        <div class="config-row">
+          <div class="row-info icon-pagina">
+            <i class="fa-solid fa-flag"></i>
+            <span>Criar Página</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </div>
+      </a>
+
+      <a href="../Dados/Dados.html" class="config-row-link">
+        <div class="config-row">
+          <div class="row-info icon-dados">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Tráfego de dados</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </div>
+      </a>
+
+      <div class="config-row">
+        <div class="row-info icon-idioma">
+          <i class="fa-solid fa-language"></i>
+          <span>Idioma</span>
+        </div>
+        <select id="selectIdioma" class="config-select" onchange="mudarIdioma()">
+            <option value="pt">Português</option>
+            <option value="en">Inglês</option>
+        </select>
+      </div>
+
+      <div class="config-row">
+        <div class="row-info icon-regiao">
+          <i class="fa-solid fa-map-marker-alt"></i>
+          <span>Região</span>
+        </div>
+        <select id="selectRegiao" class="config-select" onchange="mudarRegiao()">
+          <option value="AO">Angola</option>
+          <option value="BR">Brasil</option>
+          <option value="PT">Portugal</option>
+        </select>
+      </div>
+
+      <div class="config-row logout-row" onclick="confirmarSair()">
+        <div class="row-info">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Terminar sessão</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="Config.js"></script>
+</body>
+        </html>
+          
