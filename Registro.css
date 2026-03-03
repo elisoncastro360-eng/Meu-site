@@ -1,0 +1,138 @@
+/* Reset e Variáveis de Cores - Estilo PulseFeed */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+:root {
+    --bg-color: #000000;       /* Preto Absoluto */
+    --card-bg: #0a0a0a;        /* Preto Elevado */
+    --accent-color: #00d2ff;   /* Azul Neon */
+    --text-main: #ffffff;
+    --text-dim: #888888;
+    --border-color: #222222;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+.login-container {
+    position: relative;
+    padding: 40px 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.05);
+}
+
+/* Título Animado */
+.brand-title {
+    color: var(--accent-color);
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    animation: pulseNeon 2.5s infinite ease-in-out;
+}
+
+@keyframes pulseNeon {
+    0%, 100% { text-shadow: 0 0 10px rgba(0, 210, 255, 0.5); transform: scale(1); }
+    50% { text-shadow: 0 0 20px rgba(0, 210, 255, 0.8); transform: scale(1.02); }
+}
+
+.subtitle {
+    color: var(--text-dim);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Seta Voltar */
+.back-btn {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    color: var(--text-dim);
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    color: var(--accent-color);
+    transform: translateX(-3px);
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-color: #121212;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: var(--accent-color);
+}
+
+/* Password Container e Ícone */
+.password-container {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    color: #555;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.eye-icon.active {
+    transform: rotate(360deg) scale(1.2);
+    color: var(--accent-color);
+}
+
+/* Botão Cadastrar */
+.primary-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent-color);
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.primary-btn:hover {
+    box-shadow: 0 0 15px var(--accent-color);
+    transform: translateY(-2px);
+}
+
+#errorMsg {
+    color: #ff4d4d;
+    font-size: 13px;
+    margin-top: 15px;
+  }
+              
