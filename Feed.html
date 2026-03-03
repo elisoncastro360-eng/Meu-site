@@ -1,85 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Home</title>
     <link rel="stylesheet" href="Feed.css">
 </head>
 <body>
 
-    <div class="layout">
+<div class="layout">
 
-        <!-- Sidebar -->
-        <aside class="sidebar" id="sidebar">
-            <div class="logo">MinhaApp</div>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">MinhaApp</div>
 
-            <nav>
+        <nav>
+            <ul>
+                <li><a href="home.html">🏠 Home</a></li>
+                <li><a href="dashboard.html">📊 Dashboard</a></li>
+                <li><a href="projetos.html">📁 Projetos</a></li>
+                <li><a href="relatorios.html">📄 Relatórios</a></li>
+                <li><a href="Configurações.html">⚙️Configurações</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Header -->
+        <header class="header">
+            <button id="toggleSidebar">☰</button>
+            <input type="text" placeholder="Buscar...">
+            <div class="user">
+                <span>Olá, João 👋</span>
+                <a href="perfil.html" class="avatar">J</a>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <section class="content">
+            <h1>Bem-vindo de volta!</h1>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Pendências</h3>
+                    <p class="number">3</p>
+                </div>
+
+                <div class="card">
+                    <h3>Atividades</h3>
+                    <p class="number">18</p>
+                </div>
+
+                <div class="card">
+                    <h3>Receita</h3>
+                    <p class="number">R$ 12.450</p>
+                </div>
+
+                <div class="card">
+                    <h3>Usuários</h3>
+                    <p class="number">24</p>
+                </div>
+            </div>
+
+            <div class="activity">
+                <h2>Atividades Recentes</h2>
                 <ul>
-                    <li class="active">🏠 Home</li>
-                    <li>📊 Dashboard</li>
-                    <li>📁 Projetos</li>
-                    <li>📄 Relatórios</li>
-                    <li>⚙️ Configurações</li>
+                    <li>Projeto X criado <span>há 2 horas</span></li>
+                    <li>Relatório enviado <span>ontem</span></li>
+                    <li>Usuário Maria cadastrado <span>2 dias atrás</span></li>
                 </ul>
-            </nav>
-        </aside>
+            </div>
+        </section>
 
-        <!-- Main -->
-        <div class="main">
-
-            <!-- Header -->
-            <header class="header">
-                <button id="toggleSidebar">☰</button>
-                <input type="text" placeholder="Buscar...">
-                <div class="user">
-                    <span>Olá, João 👋</span>
-                    <div class="avatar">J</div>
-                </div>
-            </header>
-
-            <!-- Content -->
-            <section class="content">
-
-                <h1>Bem-vindo de volta!</h1>
-
-                <!-- Cards -->
-                <div class="cards">
-                    <div class="card">
-                        <h3>Pendências</h3>
-                        <p class="number">3</p>
-                    </div>
-
-                    <div class="card">
-                        <h3>Atividades</h3>
-                        <p class="number">18</p>
-                    </div>
-
-                    <div class="card">
-                        <h3>Receita</h3>
-                        <p class="number">R$ 12.450</p>
-                    </div>
-
-                    <div class="card">
-                        <h3>Usuários</h3>
-                        <p class="number">24</p>
-                    </div>
-                </div>
-
-                <!-- Atividades Recentes -->
-                <div class="activity">
-                    <h2>Atividades Recentes</h2>
-                    <ul>
-                        <li>Projeto X criado <span>há 2 horas</span></li>
-                        <li>Relatório enviado <span>ontem</span></li>
-                        <li>Usuário Maria cadastrado <span>2 dias atrás</span></li>
-                    </ul>
-                </div>
-
-            </section>
-
-        </div>
     </div>
+</div>
 
 <script src="Feed.js"></script>
 </body>
-    </html>
+                    </html>
