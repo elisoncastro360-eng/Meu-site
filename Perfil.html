@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - MinhaApp</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">MinhaApp</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">🏠 Home</a></li>
+                <li><a href="dashboard.html">📊 Dashboard</a></li>
+                <li><a href="projetos.html">📁 Projetos</a></li>
+                <li><a href="relatorios.html">📄 Relatórios</a></li>
+                <li><a href="configuracoes.html">⚙️ Configurações</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Header -->
+        <header class="header">
+            <button id="toggleSidebar">☰</button>
+            <input type="text" placeholder="Buscar...">
+            <div class="user">
+                <span>Meu Perfil 👤</span>
+                <a href="perfil.html" class="avatar">J</a>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <section class="content">
+
+            <div class="profile-container">
+
+                <!-- Card Principal -->
+                <div class="profile-card">
+
+                    <div class="profile-left">
+                        <div class="profile-avatar-large" id="profileInitial">J</div>
+                        <h2 id="profileName">João Silva</h2>
+                        <p id="profileRole">Administrador</p>
+                    </div>
+
+                    <div class="profile-right">
+                        <div class="info-group">
+                            <label>Email</label>
+                            <p id="profileEmail">joao@email.com</p>
+                        </div>
+
+                        <div class="info-group">
+                            <label>Membro desde</label>
+                            <p>Janeiro 2024</p>
+                        </div>
+
+                        <button class="edit-btn" id="editBtn">Editar Perfil</button>
+                    </div>
+
+                </div>
+
+                <!-- Formulário -->
+                <div class="edit-form" id="editForm">
+                    <h3>Editar Informações</h3>
+
+                    <input type="text" id="inputName" placeholder="Nome">
+                    <input type="email" id="inputEmail" placeholder="Email">
+                    <input type="text" id="inputRole" placeholder="Cargo">
+
+                    <button class="save-btn" id="saveBtn">Salvar</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+</div>
+
+<script src="Feed.js"></script>
+<script src="perfil.js"></script>
+</body>
+  </html>
