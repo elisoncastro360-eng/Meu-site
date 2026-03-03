@@ -3,43 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal Milton Banze</title>
+    <title>Plataforma de Apostas</title>
     <link rel="stylesheet" href="index.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header class="topbar">
-    <h2>Portal Milton Banze</h2>
-    <nav>
-        <a href="Login.html" class="btn-login">Login</a>
-    </nav>
-</header>
+<div class="layout">
 
-<main class="container">
-    <section class="hero">
-        <h1>Bem-vindo ao Portal</h1>
-        <p>
-            Explorando compras online, casinos, tecnologia, carros, culinária
-            e muito mais com conteúdo atualizado e organizado.
-        </p>
-    </section>
+    <!-- Sidebar -->
+    <aside class="sidebar fade-in">
+        <div class="logo">BetPrime</div>
+    </aside>
 
-<section class="cards">
-    <a href="login.html" class="card">Login</a>
-    <a href="paginas/casinos.html" class="card">Casinos</a>
-    <a href="paginas/compras.html" class="card">Compras Online</a>
-    <a href="paginas/deepnet.html" class="card">Deep / Dark Net</a>
-    <a href="paginas/culinaria.html" class="card">Culinária</a>
-    <a href="paginas/carros.html" class="card">Carros</a>
-    <a href="paginas/celulares.html" class="card">Celulares</a>
-    <a href="paginas/outros.html" class="card">Outros</a>
-</section>
-    
-</main>
+    <!-- Main -->
+    <main class="main">
 
-<footer class="footer">
-    © 2026 Milton Banze - Todos os direitos reservados
-</footer>
+        <!-- Header -->
+        <header class="header fade-in">
+            <div class="header-left">
+                <h2>Let's bet</h2>
+            </div>
+
+            <div class="auth-buttons">
+                <button class="btn login">Iniciar Sessão</button>
+                <button class="btn register">Registrar</button>
+            </div>
+        </header>
+
+        <!-- Conteúdo -->
+        <section class="content">
+
+            <!-- Jogos -->
+            <div class="section fade-up">
+                <h3>Jogos Disponíveis</h3>
+
+                <div class="cards">
+
+                    <div class="card destaque">
+                        <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h4>Multiplicador</h4>
+                        <p>Entrar no jogo</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon"><i class="fa-solid fa-futbol"></i></div>
+                        <h4>Apostas ao Vivo</h4>
+                        <p>Ver partidas disponíveis</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon"><i class="fa-solid fa-compass"></i></div>
+                        <h4>Navigator</h4>
+                        <p>Explorar jogos</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon"><i class="fa-solid fa-dice"></i></div>
+                        <h4>Outros Jogos</h4>
+                        <p>Descobrir mais opções</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Anúncios -->
+            <div class="section fade-up delay-1">
+                <h3>Anúncios</h3>
+
+                <div class="announcement">
+                    🎁 Bônus de 100% no primeiro depósito.
+                </div>
+
+                <div class="announcement">
+                    🏆 Torneio especial este fim de semana.
+                </div>
+            </div>
+
+            <!-- Histórico -->
+            <div class="section fade-up delay-2">
+                <h3>Histórico de Jogos</h3>
+
+                <ul class="history">
+                    <li>
+                        <span>Multiplicador</span>
+                        <span class="win">+ R$ 120,00</span>
+                    </li>
+
+                    <li>
+                        <span>Navigator</span>
+                        <span class="loss">- R$ 50,00</span>
+                    </li>
+
+                    <li>
+                        <span>Apostas ao Vivo</span>
+                        <span class="win">+ R$ 300,00</span>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
 
 </body>
-    </html>  </html>
+</html> 
