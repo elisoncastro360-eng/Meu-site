@@ -1,0 +1,167 @@
+:root {
+    --bg-color: #000000;       /* Preto Absoluto */
+    --card-bg: #0a0a0a;        /* Preto Elevado */
+    --accent-color: #00d2ff;   /* Azul Neon Pulse */
+    --text-main: #ffffff;
+    --text-dim: #888888;
+    --border-color: #222222;
+    --success: #00ff9d;
+    --danger: #ff4d4d;
+    --whatsapp: #25d366;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container { width: 100%; max-width: 500px; }
+
+header { text-align: center; margin-bottom: 25px; }
+
+/* Título Estilo Login */
+.brand-title {
+    color: var(--accent-color);
+    font-size: 32px;
+    letter-spacing: 2px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    animation: pulseNeon 2.5s infinite ease-in-out;
+}
+
+@keyframes pulseNeon {
+    0%, 100% { text-shadow: 0 0 10px rgba(0, 210, 255, 0.5); }
+    50% { text-shadow: 0 0 20px rgba(0, 210, 255, 0.8); }
+}
+
+.subtitle { color: var(--text-dim); font-size: 14px; margin-bottom: 15px; }
+
+.region-selector {
+    background: var(--card-bg);
+    padding: 8px 15px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border-color);
+    margin-top: 10px;
+}
+
+#region-select {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-weight: 600;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+/* Seção do Timer */
+.timer-section {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.05);
+}
+
+#countdown {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin: 15px 0;
+    color: var(--text-main);
+    font-variant-numeric: tabular-nums;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    background: rgba(255,255,255,0.05);
+    padding: 6px 16px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+
+#status-dot { width: 10px; height: 10px; border-radius: 50%; }
+.open { background: var(--success); box-shadow: 0 0 12px var(--success); }
+.closed { background: var(--danger); box-shadow: 0 0 12px var(--danger); }
+
+/* Grid de Cards */
+.cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 18px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover { border-color: var(--accent-color); transform: translateY(-5px); }
+.card .icon { font-size: 1.5rem; color: var(--accent-color); margin-bottom: 10px; }
+.card h3 { font-size: 16px; margin-bottom: 8px; }
+.card p { font-size: 12px; color: var(--text-dim); }
+
+/* Contatos */
+.contact-section h4 { margin-bottom: 15px; text-align: center; color: var(--text-dim); font-size: 14px; }
+.contact-links { display: flex; justify-content: space-between; gap: 10px; }
+
+.contact-item {
+    flex: 1;
+    background: var(--card-bg);
+    color: var(--text-main);
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover { 
+    background: var(--accent-color); 
+    color: #000; 
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+.contact-item.whatsapp:hover { 
+    background: var(--whatsapp); 
+    border-color: var(--whatsapp);
+    box-shadow: 0 0 15px var(--whatsapp);
+}
+
+/* Botão Voltar */
+.back-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background: transparent;
+    color: var(--text-dim);
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    color: var(--text-main);
+    border-color: var(--text-main);
+    background: rgba(255,255,255,0.05);
+}
