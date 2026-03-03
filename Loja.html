@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNB Social - Market</title>
+    <link rel="stylesheet" href="Loja.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app-container">
+    <header class="top-header">
+        <h2 class="logo">MNB <span>Shop</span></h2>
+        <div class="header-actions">
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cartBadge" class="badge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="shopSearch" placeholder="Procurar produtos..." oninput="filtrarProdutos()">
+        </div>
+    </div>
+
+    <div class="categories-wrapper">
+        <button class="cat-btn active" onclick="filtrarCategoria('Todos', this)">Todos</button>
+        <button class="cat-btn" onclick="filtrarCategoria('Celulares', this)">Celulares</button>
+        <button class="cat-btn" onclick="filtrarCategoria('Eletrônicos', this)">Eletrônicos</button>
+        <button class="cat-btn" onclick="filtrarCategoria('Moda', this)">Moda</button>
+    </div>
+
+    <main id="productsGrid" class="products-grid"></main>
+
+    <nav class="bottom-nav">
+        <a href="../Feed/Feed.html"><i class="fas fa-home"></i></a>
+        <a href="Loja.html"><i class="fas fa-shopping-bag active"></i></a>
+        <a href="../Chat/Chat.html"><i class="fas fa-comment"></i></a>
+        <a href="../Perfil/Perfil.html"><i class="fas fa-user"></i></a>
+    </nav>
+</div>
+
+<script src="Loja.js"></script>
+</body>
+</html>
+    viewModal.style.display = "none";
+}
+
+function restaurarPost(event) {
+    event.stopPropagation();
+    let posts = JSON.parse(localStorage.getItem("mnb_posts") || "[]");
+    
+    // Mudar o status de arquivado para falso
+    posts = posts.map(p => {
+        if(p.id === postSelecionadoId) p.arquivado = false;
+        return p;
+    });
+
+    localStorage.setItem("mnb_posts", JSON.stringify(posts));
+    fecharVisualizacao();
+    carregarArquivados();
+    alert("Post restaurado para o feed!");
+}
+
+function excluirDefinitivo(event) {
+    event.stopPropagation();
+    if(!confirm("Excluir permanentemente? Esta ação não tem volta.")) return;
+
+    let posts = JSON.parse(localStorage.getItem("mnb_posts") || "[]");
+    posts = posts.filter(p => p.id !== postSelecionadoId);
+
+    localStorage.setItem("mnb_posts", JSON.stringify(posts));
+    fecharVisualizacao();
+    carregarArquivados();
+}
+
+// Iniciar
+carregarArquivados();
