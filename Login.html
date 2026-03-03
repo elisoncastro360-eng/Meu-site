@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login MNB</title>
+    <title>Login - MNB</title>
     <link rel="stylesheet" href="Login.css">
 </head>
-<body>
+<body class="login-body">
 
-<div class="login-container">
-    <h2>Login MNB</h2>
+    <div class="login-container">
+        <h2>Login MNB</h2>
 
-    <form id="loginForm">
-        <input type="text" id="username" placeholder="Usuário" required>
-        <input type="password" id="password" placeholder="Senha" required>
-        <button type="submit">Entrar</button>
+        <form id="loginForm" class="login-form">
+            
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Usuário" required>
+            </div>
 
-        <p id="error-message"></p>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Senha" required>
+            </div>
 
-        <div class="links">
-            <a href="Registro.html">Criar Conta</a>
-            <a href="Suporte.html">Suporte</a>
-        </div>
-    </form>
-</div>
+            <button type="submit" class="btn-login">Entrar</button>
 
-<script src="Login.js"></script>
+            <p id="errorMessage" class="error-message"></p>
+
+            <div class="links">
+                <a href="Registro.html">Criar Conta</a>
+                <a href="Suporte.html">Suporte</a>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="Login.js"></script>
 </body>
 </html>
