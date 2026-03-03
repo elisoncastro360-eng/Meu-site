@@ -14,7 +14,7 @@ form.addEventListener("submit", function(event) {
         localStorage.setItem("user", username);
 
         // Redireciona para a Home
-        window.location.href = "index.html";
+        window.location.href = "Feed.html";
 
     } else {
         errorMessage.textContent = "Usuário ou senha incorretos!";
