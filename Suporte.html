@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseFeed - Suporte Global</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="suporte.css">
+</head>
+<body class="dark-mode">
+
+    <div class="container">
+        <header>
+            <h1 class="brand-title">PULSEFEED</h1>
+            <p class="subtitle">Suporte Global</p>
+            <div class="region-selector">
+                <i class="fas fa-globe"></i>
+                <select id="region-select"></select>
+            </div>
+        </header>
+
+        <section class="timer-section">
+            <div class="status-badge" id="status-container">
+                <span id="status-dot"></span>
+                <span id="status-text">Sincronizando...</span>
+            </div>
+            <div id="countdown">00:00:00</div>
+            <p class="helper-text" id="region-display">Horário Local</p>
+        </section>
+
+        <div class="cards-grid">
+            <div class="card">
+                <i class="fas fa-shopping-bag icon"></i>
+                <h3>Compras</h3>
+                <p>Suporte para pagamentos e pedidos.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-user-tie icon"></i>
+                <h3>Empregos</h3>
+                <p>Vagas e candidaturas em aberto.</p>
+            </div>
+        </div>
+
+        <section class="contact-section">
+            <h4>Canais de Atendimento</h4>
+            <div class="contact-links">
+                <a href="mailto:elisoncastro360@gmail.com" class="contact-item" title="E-mail">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                
+                <a href="https://api.whatsapp.com/send?phone=258874603730&text=Olá,%20gostaria%20de%20mais%20informações" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="contact-item whatsapp" 
+                   title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <a href="tel:+258874603730" class="contact-item" title="Ligar">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+            </div>
+        </section>
+
+        <button class="back-btn" onclick="window.history.back()">Voltar ao Início</button>
+    </div>
+
+    <script src="suporte.js"></script>
+</body>
+  </html>
+  
