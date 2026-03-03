@@ -1,0 +1,100 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Fundo profissional */
+body {
+    background: #0f172a;
+    color: #f1f5f9;
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #111827;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.topbar h2 {
+    font-weight: 600;
+}
+
+.btn-login {
+    padding: 8px 16px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: #1d4ed8;
+}
+
+/* Container */
+.container {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    opacity: 0.8;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    padding: 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    background: #1e293b;
+    transition: 0.3s ease;
+    border: 1px solid #334155;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    background: #111827;
+    font-size: 14px;
+    opacity: 0.7;
+}
