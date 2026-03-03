@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseFeed - Criar Conta</title>
+    <link rel="stylesheet" href="Registro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <div class="login-container">
+        <a href="../Login/Login.html" class="back-btn" title="Voltar ao login">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+
+        <h2 class="brand-title">PULSEFEED</h2>
+        <p class="subtitle">Crie sua conta gratuita</p>
+
+        <form id="registerForm">
+            <input type="text" id="fullName" placeholder="Nome Completo" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="text" id="newUsername" placeholder="Escolha um Usuário" required>
+            <div class="password-container">
+                <input type="password" id="newPassword" placeholder="Crie uma Senha" required>
+                <i class="fa-solid fa-eye-slash eye-icon" id="togglePassword"></i>
+            </div>
+            <button type="submit" class="primary-btn">Cadastrar</button>
+        </form>
+
+        <p id="errorMsg"></p>
+    </div>
+
+    <script src="Registro.js"></script>
+</body>
+                                </html>
+                                
