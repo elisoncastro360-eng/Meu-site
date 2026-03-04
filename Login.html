@@ -5,29 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - MNB</title>
     <link rel="stylesheet" href="Login.css">
+
+    <!-- Ícones (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="login-body">
 
     <div class="login-container">
-        <h2>Login MNB</h2>
-
         <form id="loginForm" class="login-form">
-            
-            <div class="input-group">
-                <input type="text" id="username" placeholder="Usuário" required>
+
+            <h2>Login MNB</h2>
+
+            <!-- Links superiores -->
+            <div class="top-links">
+                <a href="registo.html">
+                    <i class="fa-solid fa-user-plus"></i> Criar Conta
+                </a>
+                <a href="suporte.html">
+                    <i class="fa-solid fa-headset"></i> Suporte
+                </a>
             </div>
 
+            <!-- Usuário ou Número -->
             <div class="input-group">
+                <input type="text" id="username" placeholder="Usuário ou Número" required>
+            </div>
+
+            <!-- Senha -->
+            <div class="input-group password-group">
                 <input type="password" id="password" placeholder="Senha" required>
+                <span class="toggle-password" id="togglePassword">
+                    <i class="fa-solid fa-eye"></i>
+                </span>
             </div>
 
             <button type="submit" class="btn-login">Entrar</button>
 
-            <p id="errorMessage" class="error-message"></p>
+            <p id="errorMessage" class="error"></p>
 
-            <div class="links">
-                <a href="Registro.html">Criar Conta</a>
-                <a href="Suporte.html">Suporte</a>
+            <!-- Divisor -->
+            <div class="divider">
+                <span>ou</span>
+            </div>
+
+            <!-- Login Google -->
+            <button type="button" class="google-btn">
+                <i class="fa-brands fa-google"></i> Entrar com Google
+            </button>
+
+            <!-- Termos -->
+            <div class="bottom-links">
+                <a href="Termos.html">Termos de Uso</a>
+                <a href="politica.html">Política de Privacidade</a>
             </div>
 
         </form>
