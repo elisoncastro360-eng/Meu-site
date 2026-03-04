@@ -1,4 +1,4 @@
-/* Reset e Variáveis de Cores - Estilo PulseFeed */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,49 +6,48 @@
     font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
+/* Variáveis Verde Emerald */
 :root {
-    --bg-color: #000000;       /* Preto Absoluto */
-    --card-bg: #0a0a0a;        /* Preto Elevado */
-    --accent-color: #00d2ff;   /* Azul Neon */
+    --bg-gradient-start: #065f46;  /* Emerald 800 */
+    --bg-gradient-end: #10b981;    /* Emerald 500 */
+    --card-bg: #0f172a;            /* Azul escuro elegante */
+    --accent-color: #10b981;       /* Verde principal */
+    --accent-hover: #059669;       /* Verde hover */
     --text-main: #ffffff;
-    --text-dim: #888888;
-    --border-color: #222222;
+    --text-dim: #94a3b8;
+    --border-color: #1f2937;
 }
 
+/* FUNDO VERDE IGUAL LOGIN */
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-color);
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
     color: var(--text-main);
 }
 
+/* CARD */
 .login-container {
     position: relative;
     padding: 40px 30px;
     border-radius: 20px;
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     text-align: center;
     background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    box-shadow: 0 0 20px rgba(0, 210, 255, 0.05);
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Título Animado */
+/* TÍTULO */
 .brand-title {
     color: var(--accent-color);
-    font-size: 32px;
+    font-size: 30px;
     letter-spacing: 2px;
     font-weight: 900;
     margin-bottom: 5px;
-    animation: pulseNeon 2.5s infinite ease-in-out;
-}
-
-@keyframes pulseNeon {
-    0%, 100% { text-shadow: 0 0 10px rgba(0, 210, 255, 0.5); transform: scale(1); }
-    50% { text-shadow: 0 0 20px rgba(0, 210, 255, 0.8); transform: scale(1.02); }
 }
 
 .subtitle {
@@ -57,7 +56,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* Seta Voltar */
+/* BOTÃO VOLTAR */
 .back-btn {
     position: absolute;
     top: 25px;
@@ -73,25 +72,26 @@ body {
     transform: translateX(-3px);
 }
 
-/* Inputs */
+/* INPUTS */
 input {
     width: 100%;
     padding: 14px;
     margin-bottom: 15px;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid var(--border-color);
-    background-color: #121212;
+    background-color: #111827;
     color: #fff;
     font-size: 15px;
     outline: none;
-    transition: border-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 input:focus {
     border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
 }
 
-/* Password Container e Ícone */
+/* PASSWORD CONTAINER */
 .password-container {
     position: relative;
 }
@@ -101,23 +101,22 @@ input:focus {
     right: 15px;
     top: 15px;
     cursor: pointer;
-    color: #555;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: #6b7280;
+    transition: 0.3s;
 }
 
-.eye-icon.active {
-    transform: rotate(360deg) scale(1.2);
+.eye-icon:hover {
     color: var(--accent-color);
 }
 
-/* Botão Cadastrar */
+/* BOTÃO CADASTRAR */
 .primary-btn {
     width: 100%;
     padding: 14px;
     background: var(--accent-color);
-    color: #000;
+    color: #ffffff;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
@@ -126,13 +125,126 @@ input:focus {
 }
 
 .primary-btn:hover {
-    box-shadow: 0 0 15px var(--accent-color);
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+
+/* ERRO */
+#errorMsg {
+    color: #ef4444;
+    font-size: 13px;
+    margin-top: 15px;
+}
+/* =========================
+   ANIMAÇÃO DE ENTRADA CARD
+========================= */
+.login-container {
+    animation: fadeSlide 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+@keyframes fadeSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   FUNDO ANIMADO SUAVE
+========================= */
+body {
+    background-size: 200% 200%;
+    animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =========================
+   INPUTS ANIMADOS
+========================= */
+input {
+    transition: all 0.3s ease;
+}
+
+input:hover {
     transform: translateY(-2px);
 }
 
-#errorMsg {
-    color: #ff4d4d;
-    font-size: 13px;
-    margin-top: 15px;
-  }
-              
+input:focus {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   BOTÃO COM EFEITO GLOW
+========================= */
+.primary-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.primary-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.primary-btn:hover::after {
+    left: 100%;
+}
+
+/* Efeito leve pulsando */
+.primary-btn:hover {
+    animation: pulseGlow 1.5s infinite alternate;
+}
+
+@keyframes pulseGlow {
+    from {
+        box-shadow: 0 0 10px rgba(16,185,129,0.4);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(16,185,129,0.8);
+    }
+}
+
+/* =========================
+   ÍCONE OLHO ANIMADO
+========================= */
+.eye-icon {
+    transition: transform 0.4s ease, color 0.3s;
+}
+
+.eye-icon.active {
+    transform: rotate(180deg) scale(1.2);
+    color: var(--accent-color);
+}
+
+/* =========================
+   TÍTULO COM ENTRADA SUAVE
+========================= */
+.brand-title {
+    animation: fadeTitle 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeTitle {
+    to {
+        opacity: 1;
+    }
+          }
