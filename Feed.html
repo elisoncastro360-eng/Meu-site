@@ -3,80 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Home</title>
+    <title>Feed de Jogos</title>
     <link rel="stylesheet" href="Feed.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Ícones FontAwesome -->
 </head>
 <body>
 
-<div class="layout">
-
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar">
-        <div class="logo">MinhaApp</div>
-
-        <nav>
-            <ul>
-                <li><a href="home.html">🏠 Home</a></li>
-                <li><a href="dashboard.html">📊 Dashboard</a></li>
-                <li><a href="projetos.html">📁 Projetos</a></li>
-                <li><a href="relatorios.html">📄 Relatórios</a></li>
-                <li><a href="Configurações.html">⚙️Configurações</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <!-- Main -->
-    <div class="main">
-
-        <!-- Header -->
-        <header class="header">
-            <button id="toggleSidebar">☰</button>
-            <input type="text" placeholder="Buscar...">
-            <div class="user">
-                <span>Olá, João 👋</span>
-                <a href="Perfil.html" class="avatar">J</a>
+<div class="feed-container">
+    <!-- Área de Perfil no canto superior direito -->
+    <div class="profile-section">
+        <div class="profile-header">
+            <div class="profile-avatar-container">
+                <a href="Perfil.html"> <!-- Link no ícone de perfil -->
+                    <i class="fas fa-user-circle fa-4x"></i> <!-- Ícone de avatar -->
+                </a>
             </div>
-        </header>
-
-        <!-- Content -->
-        <section class="content">
-            <h1>Bem-vindo de volta!</h1>
-
-            <div class="cards">
-                <div class="card">
-                    <h3>Pendências</h3>
-                    <p class="number">3</p>
-                </div>
-
-                <div class="card">
-                    <h3>Atividades</h3>
-                    <p class="number">18</p>
-                </div>
-
-                <div class="card">
-                    <h3>Receita</h3>
-                    <p class="number">R$ 12.450</p>
-                </div>
-
-                <div class="card">
-                    <h3>Usuários</h3>
-                    <p class="number">24</p>
-                </div>
+            <div class="profile-info">
+                <h2>João Silva</h2>
+                <p><strong>Saldo:</strong> R$ <span id="saldo">1000.00</span></p>
+                <button id="editProfileBtn">Editar Perfil</button>
             </div>
+        </div>
+    </div>
 
-            <div class="activity">
-                <h2>Atividades Recentes</h2>
-                <ul>
-                    <li>Projeto X criado <span>há 2 horas</span></li>
-                    <li>Relatório enviado <span>ontem</span></li>
-                    <li>Usuário Maria cadastrado <span>2 dias atrás</span></li>
-                </ul>
-            </div>
-        </section>
+    <header class="feed-header">
+        <h1>Jogos Disponíveis</h1>
+    </header>
+
+    <div class="games-list">
+        <!-- Jogos - 6 cards -->
+        <div class="game-card">
+            <i class="fas fa-dice fa-2x"></i>
+            <h3>Multiplicador</h3>
+            <p>Desafie os limites, aposte no multiplicador e ganhe muito!</p>
+            <a href="Multiplicador.html" class="btn">Jogar</a>
+        </div>
+
+        <div class="game-card">
+            <i class="fas fa-play-circle fa-2x"></i>
+            <h3>Apostas ao Vivo</h3>
+            <p>Aposte nas partidas ao vivo e sinta a adrenalina!</p>
+            <a href="apostas-ao-vivo.html" class="btn">Jogar</a>
+        </div>
+
+        <div class="game-card">
+            <i class="fas fa-compass fa-2x"></i>
+            <h3>Navigator</h3>
+            <p>Explore e descubra novas formas de jogar!</p>
+            <a href="Navigator.html" class="btn">Jogar</a>
+        </div>
+
+        <div class="game-card">
+            <i class="fas fa-gamepad fa-2x"></i>
+            <h3>Outros Jogos</h3>
+            <p>Descubra outros jogos emocionantes disponíveis!</p>
+            <a href="outros-jogos.html" class="btn">Jogar</a>
+        </div>
+
+        <div class="game-card">
+            <i class="fas fa-chess fa-2x"></i> <!-- Novo ícone -->
+            <h3>Desafio de Xadrez</h3>
+            <p>Desafie seu raciocínio e vença no xadrez!</p>
+            <a href="desafio-xadrez.html" class="btn">Jogar</a>
+        </div>
+
+        <div class="game-card">
+            <i class="fas fa-basketball-ball fa-2x"></i> <!-- Novo ícone -->
+            <h3>Basquete Virtual</h3>
+            <p>Participe de partidas de basquete e vença!</p>
+            <a href="basquete-virtual.html" class="btn">Jogar</a>
+        </div>
 
     </div>
 </div>
 
+<!-- Modal de edição de perfil -->
+<div id="editProfileModal" class="modal">
+    <div class="modal-content">
+        <h2>Editar Perfil</h2>
+        <label for="avatarInput">Nova Foto de Avatar</label>
+        <input type="file" id="avatarInput">
+        <label for="nameInput">Nome</label>
+        <input type="text" id="nameInput" value="João Silva">
+        <button id="saveProfileBtn">Salvar</button>
+        <button id="closeModalBtn">Fechar</button>
+    </div>
+</div>
+
 <script src="Feed.js"></script>
+
 </body>
-                    </html>
+                             </html>
