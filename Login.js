@@ -13,7 +13,7 @@ form.addEventListener("submit", function(event) {
         localStorage.setItem("loggedIn", "true");
         localStorage.setItem("user", username);
 
-        window.location.href = "index.html";
+        window.location.href = "Feed.html";
 
     } else {
         errorMessage.textContent = "Usuário ou senha incorretos!";
