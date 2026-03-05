@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.wallet-container {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.wallet-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.balance-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.balance-card p { opacity: 0.8; margin: 0; }
+.balance-card h1 { font-size: 2.5rem; margin: 10px 0; }
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-add { background-color: #28a745; color: white; }
+.btn-clear { background-color: #dc3545; color: white; }
+button:hover { opacity: 0.9; }
+
+.history h3 { font-size: 1.1rem; color: #333; }
+ul { list-style: none; padding: 0; }
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+             
