@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,28 +8,27 @@
 </head>
 <body>
 
+<div class="top-bar">
+    <div class="top-title">Mini Aviator</div>
+    <div class="top-balance">
+        💰 <span id="balance">1000</span> MZN
+    </div>
+</div>
+
 <div class="game-container">
 
-    <h2>Mini Aviator</h2>
+    <canvas id="gameCanvas" width="380" height="220"></canvas>
 
-    <!-- Display do Multiplicador -->
     <div class="crash-area">
         <div id="multiplier">1.00x</div>
     </div>
 
-    <!-- Área de Aposta -->
     <div class="bet-area">
         <input type="number" id="betAmount" placeholder="Valor da aposta" min="1">
         <button id="betBtn">Apostar</button>
         <button id="cashoutBtn" disabled>Cash Out</button>
     </div>
 
-    <!-- Saldo -->
-    <div class="balance">
-        Saldo: <span id="balance">1000</span> MZN
-    </div>
-
-    <!-- Histórico -->
     <div class="history">
         <h4>Histórico</h4>
         <div id="historyList"></div>
@@ -38,6 +36,9 @@
 
 </div>
 
+<audio id="tickSound" src="https://assets.mixkit.co/sfx/preview/mixkit-interface-hint-notification-911.wav"></audio>
+<audio id="crashSound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-retro-game-over-213.wav"></audio>
+
 <script src="Aviator.js"></script>
 </body>
-  </html>
+    </html>
