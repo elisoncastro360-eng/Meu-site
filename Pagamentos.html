@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Área de Pagamento - LETS Bet</title>
+<link rel="stylesheet" href="Pagamento.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="payment-container">
+
+    <h2>Depósito</h2>
+
+    <!-- Seleção de Método -->
+    <div class="methods">
+        <div class="method active" data-method="emola">
+            <i class="fa-solid fa-wallet"></i>
+            <span>e-Mola</span>
+        </div>
+
+        <div class="method" data-method="mpesa">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <span>M-Pesa</span>
+        </div>
+    </div>
+
+    <!-- Formulário -->
+    <form id="paymentForm">
+
+        <label>Valor (MZN)</label>
+        <input type="number" id="amount" placeholder="Ex: 500" required>
+
+        <label>Número de Telefone</label>
+        <input type="tel" id="phone" placeholder="84/85/86 XXXXXXX" required>
+
+        <button type="submit" class="pay-btn">
+            Depositar
+        </button>
+
+    </form>
+
+    <div id="message"></div>
+
+</div>
+
+<script src="Pagamento.js"></script>
+</body>
+</html>
