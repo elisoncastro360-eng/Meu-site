@@ -1,91 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil - MinhaApp</title>
-    <link rel="stylesheet" href="perfil.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - PulseFeed</title>
+  <link rel="stylesheet" href="Perfil.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-<div class="layout">
+  <div class="config-container">
 
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar">
-        <div class="logo">MinhaApp</div>
-        <nav>
-            <ul>
-                <li><a href="home.html">🏠 Home</a></li>
-                <li><a href="dashboard.html">📊 Dashboard</a></li>
-                <li><a href="projetos.html">📁 Projetos</a></li>
-                <li><a href="relatorios.html">📄 Relatórios</a></li>
-                <li><a href="configuracoes.html">⚙️ Configurações</a></li>
-            </ul>
-        </nav>
-    </aside>
+    <header class="config-header">  
+      <a href="../Feed/Feed.html" class="btn-back">  
+        <i class="fa-solid fa-arrow-left"></i>  
+      </a>  
+      <h1>Perfil</h1>  
+    </header>
 
-    <!-- Main -->
-    <div class="main">
+    <div class="config-grid">
+      <a href="Levantamento.html" class="config-card">
+        <i class="fa-solid fa-user-secret"></i>
+        <span>Levatamrntos</span>
+      </a>
 
-        <!-- Header -->
-        <header class="header">
-            <button id="toggleSidebar">☰</button>
-            <input type="text" placeholder="Buscar...">
-            <div class="user">
-                <span>Meu Perfil 👤</span>
-                <a href="perfil.html" class="avatar">J</a>
-            </div>
-        </header>
+      <a href="../Info/Info.html" class="config-card">
+        <i class="fa-solid fa-id-card"></i>
+        <span>Informações</span>
+      </a>
 
-        <!-- Content -->
-        <section class="content">
+      <a href="../Segurança/Segurança.html" class="config-card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <span>Segurança</span>
+      </a>
 
-            <div class="profile-container">
+      <a href="Deposito.html" class="config-card">
+        <i class="fa-solid fa-circle-check"></i>
+        <span>Depositos</span>
+      </a>
 
-                <!-- Card Principal -->
-                <div class="profile-card">
+      <a href="Saldo.html" class="config-card">
+        <i class="fa-solid fa-wallet"></i>
+        <span>Saldo</span>
+        <small>3036,00 MZ</small>
+      </a>
 
-                    <div class="profile-left">
-                        <div class="profile-avatar-large" id="profileInitial">J</div>
-                        <h2 id="profileName">João Silva</h2>
-                        <p id="profileRole">Administrador</p>
-                    </div>
+      <a href="../Termos/Termos.html" class="config-card">
+        <i class="fa-solid fa-file-contract"></i>
+        <span>Termos</span>
+      </a>
+    </div>
 
-                    <div class="profile-right">
-                        <div class="info-group">
-                            <label>Email</label>
-                            <p id="profileEmail">joao@email.com</p>
-                        </div>
+    <div class="config-list-bottom">
+      
+      <a href="../Afiliados/Afiliados.html" class="config-row-link">
+        <div class="config-row">
+          <div class="row-info">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            <span>Ser Afiliado</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </div>
+      </a>
 
-                        <div class="info-group">
-                            <label>Membro desde</label>
-                            <p>Janeiro 2024</p>
-                        </div>
+      <a href="../Grupos/CriarGrupo.html" class="config-row-link">
+        <div class="config-row">
+          <div class="row-info">
+            <i class="fa-solid fa-users-gear"></i>
+            <span>Criar Grupo</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </div>
+      </a>
 
-                        <button class="edit-btn" id="editBtn">Editar Perfil</button>
-                    </div>
+      <a href="../Paginas/CriarPagina.html" class="config-row-link">
+        <div class="config-row">
+          <div class="row-info">
+            <i class="fa-solid fa-flag"></i>
+            <span>Criar Página</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </div>
+      </a>
 
-                </div>
+      <a href="../Dados/Dados.html" class="config-row-link">
+        <div class="config-row">
+          <div class="row-info">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Tráfego de dados</span>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </div>
+      </a>
 
-                <!-- Formulário -->
-                <div class="edit-form" id="editForm">
-                    <h3>Editar Informações</h3>
+      <div class="config-row">
+        <div class="row-info">
+          <i class="fa-solid fa-language"></i>
+          <span>Idioma</span>
+        </div>
+        <select id="selectIdioma" class="config-select" onchange="mudarIdioma()">
+          <option value="pt">Português</option>
+          <option value="en">Inglês</option>
+        </select>
+      </div>
 
-                    <input type="text" id="inputName" placeholder="Nome">
-                    <input type="email" id="inputEmail" placeholder="Email">
-                    <input type="text" id="inputRole" placeholder="Cargo">
+      <div class="config-row">
+        <div class="row-info">
+          <i class="fa-solid fa-map-marker-alt"></i>
+          <span>Região</span>
+        </div>
+        <select id="selectRegiao" class="config-select" onchange="mudarRegiao()">
+          <option value="AO">Angola</option>
+          <option value="BR">Brasil</option>
+          <option value="PT">Portugal</option>
+        </select>
+      </div>
 
-                    <button class="save-btn" id="saveBtn">Salvar</button>
-                </div>
-
-            </div>
-
-        </section>
+      <div class="config-row logout-row" onclick="confirmarSair()">
+        <div class="row-info">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Terminar sessão</span>
+        </div>
+      </div>
 
     </div>
-</div>
+  </div>
 
-<script src="Feed.js"></script>
-<script src="perfil.js"></script>
+  <script src="Perfil.js"></script>
 </body>
-  </html>
+    </html>
