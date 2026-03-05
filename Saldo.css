@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
+    background: linear-gradient(135deg, #28a745, #218838);
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -11,7 +11,7 @@ body {
     width: 100%;
     max-width: 400px;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     padding: 20px;
 }
 
@@ -39,8 +39,15 @@ body {
     margin-bottom: 20px;
 }
 
-.balance-card p { opacity: 0.8; margin: 0; }
-.balance-card h1 { font-size: 2.5rem; margin: 10px 0; }
+.balance-card p { 
+    opacity: 0.8; 
+    margin: 0; 
+}
+
+.balance-card h1 { 
+    font-size: 2.5rem; 
+    margin: 10px 0; 
+}
 
 .actions {
     display: flex;
@@ -48,27 +55,49 @@ body {
     margin-bottom: 20px;
 }
 
-button {
+.actions a {
     flex: 1;
     padding: 12px;
     border-radius: 8px;
-    border: none;
-    cursor: pointer;
+    text-align: center;
     font-weight: bold;
+    text-decoration: none;
     transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: white;
 }
 
-.btn-add { background-color: #28a745; color: white; }
-.btn-clear { background-color: #dc3545; color: white; }
-button:hover { opacity: 0.9; }
+/* Verde - Depósito */
+.btn-deposito { 
+    background-color: #28a745; 
+}
 
-.history h3 { font-size: 1.1rem; color: #333; }
-ul { list-style: none; padding: 0; }
+/* Vermelho - Levantamento */
+.btn-levantamento { 
+    background-color: #dc3545; 
+}
+
+.actions a:hover { 
+    opacity: 0.9; 
+}
+
+.history h3 { 
+    font-size: 1.1rem; 
+    color: #333; 
+}
+
+ul { 
+    list-style: none;
+    padding: 0;
+}
+
 li {
     padding: 10px 0;
     border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
     font-size: 0.9rem;
-  }
-             
+    }
