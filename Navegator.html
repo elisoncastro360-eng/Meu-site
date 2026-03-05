@@ -1,1 +1,43 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Aviator - LETS Bet</title>
+<link rel="stylesheet" href="Navegator.css">
+</head>
+<body>
+
+<div class="game-container">
+
+    <h2>Mini Aviator</h2>
+
+    <!-- Display do Multiplicador -->
+    <div class="crash-area">
+        <div id="multiplier">1.00x</div>
+    </div>
+
+    <!-- Área de Aposta -->
+    <div class="bet-area">
+        <input type="number" id="betAmount" placeholder="Valor da aposta" min="1">
+        <button id="betBtn">Apostar</button>
+        <button id="cashoutBtn" disabled>Cash Out</button>
+    </div>
+
+    <!-- Saldo -->
+    <div class="balance">
+        Saldo: <span id="balance">1000</span> MZN
+    </div>
+
+    <!-- Histórico -->
+    <div class="history">
+        <h4>Histórico</h4>
+        <div id="historyList"></div>
+    </div>
+
+</div>
+
+<script src="Navegator.js"></script>
+</body>
+  </html>
