@@ -13,7 +13,7 @@ body {
 .login-body {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #065f46, #10b981);
+    background: linear-gradient(135deg, #14532d, #166534);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,27 +22,27 @@ body {
 /* CONTAINER */
 .login-container {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* FORM CARD */
+/* FORM CARD - VERDE */
 .login-form {
     width: 100%;
     max-width: 400px;
     padding: 40px;
-    background: white;
+    background: #166534;
     border-radius: 14px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
     text-align: center;
+    color: white;
 }
 
 /* TÍTULO */
 .login-form h2 {
     margin-bottom: 20px;
-    color: #065f46;
+    color: white;
 }
 
 /* LINKS SUPERIORES */
@@ -55,7 +55,7 @@ body {
 
 .top-links a {
     text-decoration: none;
-    color: #059669;
+    color: #bbf7d0;
     font-weight: 500;
 }
 
@@ -69,15 +69,21 @@ body {
     padding: 12px;
     margin: 10px 0;
     border-radius: 8px;
-    border: 1px solid #d1fae5;
+    border: 1px solid #22c55e;
     font-size: 14px;
+    background: #14532d;
+    color: white;
     transition: 0.3s;
+}
+
+.login-form input::placeholder {
+    color: #bbf7d0;
 }
 
 .login-form input:focus {
     outline: none;
-    border: 1px solid #10b981;
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    border: 1px solid #4ade80;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.2);
 }
 
 /* SENHA COM ÍCONE */
@@ -95,7 +101,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    color: #059669;
+    color: #bbf7d0;
     font-size: 16px;
 }
 
@@ -103,7 +109,7 @@ body {
 .btn-login {
     width: 100%;
     padding: 12px;
-    background: #10b981;
+    background: #22c55e;
     color: white;
     border: none;
     border-radius: 8px;
@@ -114,7 +120,14 @@ body {
 }
 
 .btn-login:hover {
-    background: #059669;
+    background: #16a34a;
+}
+
+/* ERRO */
+.error {
+    color: #fecaca;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 /* DIVISOR */
@@ -125,11 +138,11 @@ body {
 }
 
 .divider span {
-    background: white;
+    background: #166534;
     padding: 0 10px;
     position: relative;
     z-index: 1;
-    color: #065f46;
+    color: #bbf7d0;
     font-size: 14px;
 }
 
@@ -140,15 +153,16 @@ body {
     left: 0;
     width: 100%;
     height: 1px;
-    background: #d1fae5;
+    background: #22c55e;
 }
 
 /* BOTÃO GOOGLE */
 .google-btn {
     width: 100%;
     padding: 12px;
-    background: white;
-    border: 1px solid #10b981;
+    background: #14532d;
+    border: 1px solid #22c55e;
+    color: white;
     border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
@@ -156,14 +170,7 @@ body {
 }
 
 .google-btn:hover {
-    background: #ecfdf5;
-}
-
-/* ERRO */
-.error {
-    color: #dc2626;
-    font-size: 14px;
-    margin-top: 10px;
+    background: #15803d;
 }
 
 /* LINKS INFERIORES */
@@ -177,9 +184,9 @@ body {
 
 .bottom-links a {
     text-decoration: none;
-    color: #065f46;
+    color: #bbf7d0;
 }
 
 .bottom-links a:hover {
     text-decoration: underline;
-        }
+    }
