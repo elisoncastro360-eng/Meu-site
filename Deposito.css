@@ -1,20 +1,20 @@
-
 :root {
-    --bg: #0f172a;
-    --card: #1e293b;
-    --accent: #16a34a;
-    --border: #334155;
-    --text: #f1f5f9;
+    --bg: #14532d;          /* Verde escuro */
+    --card: #166534;        /* Verde médio */
+    --accent: #22c55e;      /* Verde principal */
+    --border: #15803d;
+    --text: #f0fdf4;
 }
 
 body {
-    background: var(--bg);
+    background: linear-gradient(135deg, #14532d, #166534);
     color: var(--text);
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
 .payment-container {
@@ -22,7 +22,7 @@ body {
     padding: 30px;
     border-radius: 15px;
     width: 350px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
 }
 
 h2 {
@@ -85,4 +85,4 @@ input {
     margin-top: 15px;
     text-align: center;
     font-weight: bold;
-}
+    }
