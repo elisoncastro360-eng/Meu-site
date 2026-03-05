@@ -6,29 +6,31 @@
     font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
-/* Variáveis Verde Emerald */
+/* Variáveis Verde Igual Login */
 :root {
-    --bg-gradient-start: #065f46;  /* Emerald 800 */
-    --bg-gradient-end: #10b981;    /* Emerald 500 */
-    --card-bg: #0f172a;            /* Azul escuro elegante */
-    --accent-color: #10b981;       /* Verde principal */
-    --accent-hover: #059669;       /* Verde hover */
+    --bg-gradient-start: #14532d;
+    --bg-gradient-end: #166534;
+    --card-bg: #166534;
+    --accent-color: #22c55e;
+    --accent-hover: #16a34a;
     --text-main: #ffffff;
-    --text-dim: #94a3b8;
-    --border-color: #1f2937;
+    --text-dim: #bbf7d0;
+    --border-color: #22c55e;
 }
 
-/* FUNDO VERDE IGUAL LOGIN */
+/* FUNDO VERDE */
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    background-size: 200% 200%;
+    animation: gradientMove 8s ease infinite;
     color: var(--text-main);
 }
 
-/* CARD */
+/* CARD VERDE */
 .login-container {
     position: relative;
     padding: 40px 30px;
@@ -37,8 +39,11 @@ body {
     max-width: 420px;
     text-align: center;
     background: var(--card-bg);
-    border: 1px solid rgba(255,255,255,0.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    animation: fadeSlide 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 /* TÍTULO */
@@ -48,6 +53,8 @@ body {
     letter-spacing: 2px;
     font-weight: 900;
     margin-bottom: 5px;
+    animation: fadeTitle 1s ease forwards;
+    opacity: 0;
 }
 
 .subtitle {
@@ -79,16 +86,25 @@ input {
     margin-bottom: 15px;
     border-radius: 12px;
     border: 1px solid var(--border-color);
-    background-color: #111827;
+    background-color: #14532d;
     color: #fff;
     font-size: 15px;
     outline: none;
     transition: all 0.3s ease;
 }
 
+input::placeholder {
+    color: var(--text-dim);
+}
+
+input:hover {
+    transform: translateY(-2px);
+}
+
 input:focus {
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+    transform: translateY(-2px);
 }
 
 /* PASSWORD CONTAINER */
@@ -101,11 +117,16 @@ input:focus {
     right: 15px;
     top: 15px;
     cursor: pointer;
-    color: #6b7280;
-    transition: 0.3s;
+    color: var(--text-dim);
+    transition: transform 0.4s ease, color 0.3s;
 }
 
 .eye-icon:hover {
+    color: var(--accent-color);
+}
+
+.eye-icon.active {
+    transform: rotate(180deg) scale(1.2);
     color: var(--accent-color);
 }
 
@@ -122,73 +143,17 @@ input:focus {
     cursor: pointer;
     transition: 0.3s;
     margin-top: 10px;
+    position: relative;
+    overflow: hidden;
 }
 
 .primary-btn:hover {
     background: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+    animation: pulseGlow 1.5s infinite alternate;
 }
 
-/* ERRO */
-#errorMsg {
-    color: #ef4444;
-    font-size: 13px;
-    margin-top: 15px;
-}
-/* =========================
-   ANIMAÇÃO DE ENTRADA CARD
-========================= */
-.login-container {
-    animation: fadeSlide 0.8s ease forwards;
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-@keyframes fadeSlide {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* =========================
-   FUNDO ANIMADO SUAVE
-========================= */
-body {
-    background-size: 200% 200%;
-    animation: gradientMove 8s ease infinite;
-}
-
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* =========================
-   INPUTS ANIMADOS
-========================= */
-input {
-    transition: all 0.3s ease;
-}
-
-input:hover {
-    transform: translateY(-2px);
-}
-
-input:focus {
-    transform: translateY(-2px);
-}
-
-/* =========================
-   BOTÃO COM EFEITO GLOW
-========================= */
-.primary-btn {
-    position: relative;
-    overflow: hidden;
-}
-
+/* Efeito brilho */
 .primary-btn::after {
     content: "";
     position: absolute;
@@ -209,42 +174,38 @@ input:focus {
     left: 100%;
 }
 
-/* Efeito leve pulsando */
-.primary-btn:hover {
-    animation: pulseGlow 1.5s infinite alternate;
+/* ERRO */
+#errorMsg {
+    color: #fecaca;
+    font-size: 13px;
+    margin-top: 15px;
 }
 
-@keyframes pulseGlow {
-    from {
-        box-shadow: 0 0 10px rgba(16,185,129,0.4);
-    }
+/* ANIMAÇÕES */
+@keyframes fadeSlide {
     to {
-        box-shadow: 0 0 25px rgba(16,185,129,0.8);
+        opacity: 1;
+        transform: translateY(0);
     }
-}
-
-/* =========================
-   ÍCONE OLHO ANIMADO
-========================= */
-.eye-icon {
-    transition: transform 0.4s ease, color 0.3s;
-}
-
-.eye-icon.active {
-    transform: rotate(180deg) scale(1.2);
-    color: var(--accent-color);
-}
-
-/* =========================
-   TÍTULO COM ENTRADA SUAVE
-========================= */
-.brand-title {
-    animation: fadeTitle 1s ease forwards;
-    opacity: 0;
 }
 
 @keyframes fadeTitle {
     to {
         opacity: 1;
     }
-          }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulseGlow {
+    from {
+        box-shadow: 0 0 10px rgba(34,197,94,0.4);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(34,197,94,0.8);
+    }
+    }
