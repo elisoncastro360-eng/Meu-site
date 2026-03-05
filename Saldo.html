@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Carteira</title>
+    <link rel="stylesheet" href="Saldo.css">
+</head>
+<body>
+
+    <div class="wallet-container">
+        <div class="wallet-header">
+            <button onclick="voltar()" class="btn-back">← Voltar</button>
+            <h2>Saldo</h2>
+        </div>
+
+        <div class="balance-card">
+            <p>Saldo Disponível</p>
+            <h1 id="saldo">18958,00Mz</h1>
+        </div>
+
+        <div class="actions">
+            <button onclick="adicionarFundos()" class="btn-add">Adicionar Fundo</button>
+            <button onclick="limparCarteira()" class="btn-clear">Limpar</button>
+        </div>
+
+        <div class="history">
+            <h3>Atividade Recente</h3>
+            <ul id="lista-transacoes">
+                </ul>
+        </div>
+    </div>
+
+    <script src="Saldo.js"></script>
+</body>
+</html>
