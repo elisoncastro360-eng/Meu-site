@@ -1,0 +1,82 @@
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --accent: #16a34a;
+    --danger: #dc2626;
+    --text: #f1f5f9;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    text-align: center;
+}
+
+.crash-area {
+    background: #0f172a;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+#multiplier {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.bet-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#betBtn {
+    background: var(--accent);
+    color: white;
+}
+
+#cashoutBtn {
+    background: var(--danger);
+    color: white;
+}
+
+.balance {
+    margin-bottom: 20px;
+}
+
+.history {
+    background: #0f172a;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.history div {
+    font-size: 14px;
+  }
