@@ -1,60 +1,82 @@
 :root {
-    --bg: #0f172a;
-    --card: #1e293b;
-    --accent: #16a34a;
-    --danger: #dc2626;
-    --text: #f1f5f9;
+    --bg: #0b1120;
+    --card: #111827;
+    --accent: #22c55e;
+    --danger: #ef4444;
+    --text: #f8fafc;
 }
 
 body {
     background: var(--bg);
     color: var(--text);
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 80px;
     display: flex;
     justify-content: center;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: #0f172a;
+    display: flex;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    border-bottom: 1px solid #1f2937;
+}
+
+.top-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.top-balance {
+    position: absolute;
+    right: 20px;
+    font-weight: bold;
+    color: var(--accent);
+    transition: 0.3s;
+}
+
+.balance-animate {
+    transform: scale(1.2);
 }
 
 .game-container {
     background: var(--card);
-    padding: 30px;
+    padding: 25px;
     border-radius: 15px;
-    width: 400px;
+    width: 420px;
     text-align: center;
+    box-shadow: 0 0 20px rgba(34,197,94,0.2);
 }
 
-.crash-area {
+canvas {
     background: #0f172a;
-    padding: 40px;
     border-radius: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #multiplier {
     font-size: 48px;
     font-weight: bold;
+    text-shadow: 0 0 15px rgba(34,197,94,0.8);
 }
 
 .bet-area {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 12px;
     margin-bottom: 20px;
 }
 
-input {
-    flex: 1;
+input, button {
     padding: 10px;
     border-radius: 8px;
     border: none;
-}
-
-button {
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
 }
 
 #betBtn {
@@ -67,16 +89,20 @@ button {
     color: white;
 }
 
-.balance {
-    margin-bottom: 20px;
-}
-
 .history {
     background: #0f172a;
     padding: 10px;
     border-radius: 8px;
+    max-height: 100px;
+    overflow-y: auto;
 }
 
-.history div {
-    font-size: 14px;
+.crash-flash {
+    animation: crashFlash 0.5s ease;
+}
+
+@keyframes crashFlash {
+    0% { background: #0f172a; }
+    50% { background: #7f1d1d; }
+    100% { background: #0f172a; }
 }
